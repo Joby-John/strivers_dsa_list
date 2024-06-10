@@ -11,7 +11,7 @@ void rotate(vector<int>& nums, int k) {
 
         for(int i = length-rotations; i<length; i++)
         {
-           temp[j]=nums[i];
+           temp[i-(length-rotations)]=nums[i]; // we could use j but mathematically we could get 0,1,2.. by i-(length - rotations) eg:- 3-3=0, 4-3=1, 5-3=2
            j++;
         }
 
