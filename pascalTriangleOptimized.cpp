@@ -15,17 +15,21 @@ void pascalTriangleRow(int row)
             element = 1;
         }
         else{
-            element= (element*(row-i))/i;
+            element = (element*(row-i))/i;
             cout<<element<<" ";
         }
     }
+    cout<<endl;
 }
 int main()
 {
-    int row;
-    cin>>row;
+    int rows;
+    cin>>rows;
 
-    pascalTriangleRow(row);
+    for(int i = 1; i<=rows; i++)
+    {
+        pascalTriangleRow(i);
+    }
 
     return 0;
 }
