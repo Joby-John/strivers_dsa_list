@@ -1,1 +1,1 @@
-Length of longest consecutive sequence: 4
+3
