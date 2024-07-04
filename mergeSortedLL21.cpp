@@ -82,12 +82,88 @@ struct ListNode {
 
             return head;
         }
-        
     }
+
+    //recurssion
+    ListNode* mergeLists(ListNode* list1, ListNode* list2) {
+        
+    if (list1 == nullptr) return list2;
+    if (list2 == nullptr) return list1;
+
+    ListNode* result;
+
+    if (list1->val < list2->val) {
+        result = list1;
+        result->next = mergeLists(list1->next, list2);
+    } else {
+        result = list2;
+        result->next = mergeLists(list1, list2->next);
+    }
+    return result;
+}
 
 int main()
 {
 
-    //to be completed with test cases
+    int n; 
+    cin>>n;
+    ListNode* l1 = nullptr;
+    ListNode* temp;
+
+    for(int i = 0; i<n; i++)
+    {
+        int element;
+        cin>>element;
+        if(l1 == nullptr)
+        {
+            l1 = new ListNode(element);
+            temp = l1;
+        }
+        else
+        {
+            temp->next = new ListNode(element);
+            temp = temp->next;
+        }
+    }
+
+    //secondList
+
+    cin>>n;
+
+    ListNode* l2 = nullptr;
+
+    for(int i = 0; i<n; i++)
+    {
+        int element;
+        cin>>element;
+        if(l2 == nullptr)
+        {
+            l2 = new ListNode(element);
+            temp = l2;
+        }
+        else
+        {
+            temp->next = new ListNode(element);
+            temp = temp->next;
+        }
+    }
+
+    ListNode* res = mergeTwoLists(l1, l2);
+
+    while(res!=nullptr)
+    {
+        cout<<res->val<<" ";
+        res = res->next;
+    }
+    cout<<endl;
+
+    // res = mergeLists(l1, l2);
+    // while(res!=nullptr)
+    // {
+    //     cout<<res->val<<" ";
+    //     res = res->next;
+    // }
+    // cout<<endl;
+
     return 0;
 }
