@@ -20,7 +20,7 @@ void NextPermutation(vector<int>&nums){
         int nextMin = swappingPos+1; 
         for(int j = swappingPos+1; j<n; j++)
         {
-            if(nums[j]>nums[swappingPos] && nums[j]<nums[nextMin])
+            if(nums[j]>nums[swappingPos] && nums[j]<=nums[nextMin])
             {
                 nextMin = j;
             }
