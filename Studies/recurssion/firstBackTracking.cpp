@@ -14,7 +14,9 @@ class recurssion
             }
 
             backTrack(i-1);
-            cout<<i<<endl;
+            cout<<i<<endl; // by writing tasks after recursive call
+            //we made sure that the execution of our task start from 
+            //the base case, that is execution only starts when it returns.
         }
 };
 
