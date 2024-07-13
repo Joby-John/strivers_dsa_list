@@ -57,7 +57,8 @@ string numberToWords(long long n) {
 }
 
 int main() {
-    long long number = 10000002345;
+    long long number;
+    cin>>number;
     string result = numberToWords(number);
     cout << result << endl; // Output should be: "One Hundred Thousand One Hundred Twenty Nine"
     return 0;
