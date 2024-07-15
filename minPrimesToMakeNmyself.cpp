@@ -1,3 +1,12 @@
+//question:- Given n and m find the minimum number of primes needed to make n, 
+//you can use m primes to do so.
+// eg:- N = 10, M = 1
+// answer :- 5
+//explanation:- minimum we require 5 primes = [2+2+2+2+2]
+//eg:- N = 11, M = 3
+//answer:- 3
+//explanation :- minimum we require 3 primes = [3+3+5]
+
 #include<bits/stdc++.h>
 
 using namespace std;
