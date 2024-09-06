@@ -38,7 +38,7 @@ class Solution
         int flipCounter = 0;
         while(i<n)
         {
-            if(pwd[i]=='1'&&pwd[i-1]=='0' || pwd[i]=='0'&&pwd[i-1]=='1')
+            if(pwd[i]!=pwd[i-1])
             {
                 flipCounter++;
             }
