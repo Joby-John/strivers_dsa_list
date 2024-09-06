@@ -4,6 +4,13 @@
 //         -> pwd should be divided to even lengthed substrings
 //         ->each entire substring should conatin either entire 1 or 0 not a mix
 // -> inorder to divide in such a way how many minimum flips should be made.
+// example
+//->101010
+//->o/p:- 3
+//-> 101011
+//->o/p:-2
+//-> 10101
+//->o/p:- -1 , as we can't divide to even substrings
 
 // solution Thought
 // -> what we do is we consider pairs(given qn conditions are met iff total size is even).
