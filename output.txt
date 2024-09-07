@@ -1,1 +1,1 @@
-Isoceles,Equilateral,None of these,None of these,
+item3 item1 item2 
